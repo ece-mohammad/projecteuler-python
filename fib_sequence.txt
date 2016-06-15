@@ -1,0 +1,9 @@
+If you consider 0 in the Fibonacci sequence to correspond to n = 0, use this formula:
+
+fn =  Phi**n / (5**0.5)
+
+Perhaps a better way is to consider 0 in the Fibonacci sequence to correspond to the 1st Fibonacci number where n = 1 for 0.  Then you can use this formula, discovered and contributed by Jordan Malachi Dant in April 2005:
+
+fn =  Phi**n / (Phi + 2)
+
+Both approaches represent limits which always round to the correct Fibonacci number and approach the actual Fibonacci number as n increases.
