@@ -9,10 +9,9 @@ from time import *
 s=time()
 
 res = 0
-for i in xrange(1,1000):
+for i in xrange(3,1000,2):
 	if i%3 ==0 or i%5 == 0:
 		res = res + i
-	i += 2
 print res
 
 #print sum([i for i in xrange(1000) if (i%3==0) or (i%5 == 0)])
