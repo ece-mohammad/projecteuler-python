@@ -1,24 +1,20 @@
-'''
-function that generates fibbo sequence up to -but not including- a certain number
-'''
-'''
-By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
-'''
-from time import *
-s=time()
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
 
-def fib(end):
-	a,b = 0,1
-	res = list()
-	while b < end:
-		res.append(b)
-		a,b = b,a+b
-	return res
+from time import time
 
-end = int(raw_input('Enter the fibbo end: '))
-print fib(end)
-'''
-sums = sum(i for i in fib(end) if (i%2==0))
-print sums
-'''
-print time() - s
+ss = time()
+
+def GenerateFib(limit):
+	a, b = 0, 1
+	while(b < limit):
+		a,b = b, a+b
+		yield b
+
+def IsEven(num):
+	return not (num & 1)
+
+print(sum(filter(IsEven, GenerateFib(4e6))))
+
+print(time() - ss)
